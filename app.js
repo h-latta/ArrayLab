@@ -232,7 +232,7 @@ function problemSix(){
 }
 
 let cuisineList = problemSix();
-console.log(cuisineList)
+console.log('Cuisine Types: ' , cuisineList)
 
 // BONUS: (come back to this after finishing all)
 //6b. Use the filter method to eliminate duplicates, leaving only distinct values in the array
@@ -248,13 +248,34 @@ function problemSeven(){
 }
 
 fullFoodName = problemSeven();
-console.log(fullFoodName)
+console.log('Full Cuisine Names: ' , fullFoodName)
 
 //8. Create a function that will append the cuisine type to the start of the dish's name. Then, return only the Vegetarian dish objects. So this function should return objects 11-13 with their names changed to "Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"
 //Map, Filter
 
+function problemEight(){
+    let result = dishes.filter(function(el){
+        if(el.cuisine === 'Vegetarian'){
+            return true
+        } else{
+            return false
+        }
+    })
+    return result
+}
+
+function problemEightTwo(){
+    let result = problemEight().map(function(el){
+        return el.cuisine + " " + el.name
+    })
+    return result
+}
+
+let selectiveFood = problemEightTwo();
+console.log(selectiveFood)
 
 //BONUS
+
 //9. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Filter
