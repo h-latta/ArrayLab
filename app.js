@@ -209,11 +209,7 @@ console.log('Even Serving Counts: ', evenServings)
 
 function problemFive(){
     let results = dishes.filter(function(el){
-        if(el.ingredients === ["tomato", "cheese"]){
-            return true
-        } else{
-            return false
-        }
+        return el.ingredients === ['tomato']
     })
     return results
 }
@@ -272,7 +268,7 @@ function problemEightTwo(){
 }
 
 let selectiveFood = problemEightTwo();
-console.log(selectiveFood)
+console.log('Vegetarian Options: ' , selectiveFood)
 
 //BONUS
 
