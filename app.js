@@ -240,6 +240,15 @@ console.log(cuisineList)
 //7. Create a function that will append the cuisine type to the start of the dish's name. Ie, "Italian Pizza"
 //Map 
 
+function problemSeven(){
+    let result = dishes.map(function(el){
+        return el.cuisine + " " + el.name
+    })
+    return result
+}
+
+fullFoodName = problemSeven();
+console.log(fullFoodName)
 
 //8. Create a function that will append the cuisine type to the start of the dish's name. Then, return only the Vegetarian dish objects. So this function should return objects 11-13 with their names changed to "Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"
 //Map, Filter
